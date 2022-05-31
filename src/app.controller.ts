@@ -10,7 +10,7 @@ export class AppController {
   @Get('/vi/health')
   @Public()
   health(): string {
-    return '365ms'
+    return '366ms'
   }
 
   @Get('/base/info')
