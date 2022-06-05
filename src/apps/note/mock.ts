@@ -1,4 +1,4 @@
-import * as Mock from 'mockjs'
+import * as Mock from "mockjs";
 
 export const test = () => {
   return {
@@ -8,5 +8,5 @@ export const test = () => {
     reference: Mock.Random.cparagraph(2),
     author: Mock.Random.cname(),
     occupation: Mock.Random.cparagraph(2),
-  }
-}
+  };
+};

@@ -1,23 +1,20 @@
-import {
-  CreateDateColumn,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from 'typeorm'
+import { CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 export class CommonBaseEntity {
   @PrimaryGeneratedColumn()
-  id: number
+  id: number;
+
   @CreateDateColumn({
     type: 'timestamp',
     name: 'created_at',
     comment: '创建时间',
   })
-  createdAt: Date
+  createdAt: Date;
 
   @UpdateDateColumn({
     type: 'timestamp',
     name: 'updated_at',
     comment: '最后更新时间',
   })
-  updatedAt: Date
+  updatedAt: Date;
 }

@@ -1,5 +1,5 @@
-import { Column, Entity } from 'typeorm'
-import { CommonBaseEntity } from '../../../common/base/common-base.entity'
+import { Column, Entity } from "typeorm";
+import { CommonBaseEntity } from "../../../common/base/common-base.entity";
 
 @Entity('note')
 export class Note extends CommonBaseEntity {
@@ -9,7 +9,7 @@ export class Note extends CommonBaseEntity {
     comment: 'title',
     name: 'title',
   })
-  title: string
+  title: string;
 
   @Column({
     type: 'varchar',
@@ -17,7 +17,7 @@ export class Note extends CommonBaseEntity {
     comment: 'content',
     name: 'content',
   })
-  content: string
+  content: string;
 
   @Column({
     type: 'varchar',
@@ -25,7 +25,7 @@ export class Note extends CommonBaseEntity {
     comment: 'reference',
     name: 'reference',
   })
-  reference: string
+  reference: string;
 
   @Column({
     type: 'varchar',
@@ -33,7 +33,7 @@ export class Note extends CommonBaseEntity {
     comment: 'author',
     name: 'author',
   })
-  author: string
+  author: string;
 
   @Column({
     type: 'int',
@@ -41,7 +41,7 @@ export class Note extends CommonBaseEntity {
     comment: 'creator',
     name: 'creator',
   })
-  creator: number
+  creator: number;
 
   // 0 审核中 1审核通过 2 审核未通过
   @Column({
@@ -49,7 +49,7 @@ export class Note extends CommonBaseEntity {
     default: 0,
     comment: 'status'
   })
-  status: number
+  status: number;
 
   @Column({
     type: 'varchar',
@@ -57,5 +57,5 @@ export class Note extends CommonBaseEntity {
     comment: 'occupation',
     name: 'occupation',
   })
-  occupation: string
+  occupation: string;
 }

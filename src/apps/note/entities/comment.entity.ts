@@ -1,5 +1,5 @@
-import { Column, Entity } from 'typeorm'
-import { CommonBaseEntity } from '../../../common/base/common-base.entity'
+import { Column, Entity } from "typeorm";
+import { CommonBaseEntity } from "../../../common/base/common-base.entity";
 
 @Entity('comment')
 export class Comment extends CommonBaseEntity {
@@ -10,7 +10,7 @@ export class Comment extends CommonBaseEntity {
     comment: '被回复评论的id',
     name: 'reply_comment_id',
   })
-  replyCommentId: number
+  replyCommentId: number;
 
   @Column({
     type: 'int',
@@ -18,14 +18,14 @@ export class Comment extends CommonBaseEntity {
     comment: '被回复评论的id',
     name: 'dingceng_reply_comment_id',
   })
-  dingcengReplyCommentId: number
+  dingcengReplyCommentId: number;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '评论内容',
   })
-  content: string
+  content: string;
 
   @Column({
     type: 'int',
@@ -33,12 +33,12 @@ export class Comment extends CommonBaseEntity {
     comment: '被评论的笔记id',
     name: 'be_note_id',
   })
-  beNoteId: number
+  beNoteId: number;
 
   @Column({
     type: 'int',
     default: 0,
     comment: '评论人',
   })
-  commentator: number
+  commentator: number;
 }

@@ -1,5 +1,5 @@
-import { Column, Entity } from 'typeorm'
-import { CommonBaseEntity } from '../../../common/base/common-base.entity'
+import { Column, Entity } from "typeorm";
+import { CommonBaseEntity } from "../../../common/base/common-base.entity";
 
 @Entity('user')
 export class User extends CommonBaseEntity {
@@ -9,54 +9,54 @@ export class User extends CommonBaseEntity {
     comment: '用户名',
     name: 'username',
   })
-  username: string
+  username: string;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '邮箱',
   })
-  email: string
+  email: string;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '手机',
   })
-  phone: string
+  phone: string;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '密码',
   })
-  password: string
+  password: string;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '语言',
   })
-  lang: string
+  lang: string;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '角色',
   })
-  role: string
+  role: string;
 
   @Column({
     type: 'int',
     default: 0,
     comment: '是否激活',
   })
-  activate: number
+  activate: number;
 
   @Column({
     type: 'varchar',
     default: '',
     comment: '昵称',
   })
-  nickname: string
+  nickname: string;
 }

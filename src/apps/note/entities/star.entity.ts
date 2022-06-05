@@ -1,5 +1,5 @@
-import { Column, Entity } from 'typeorm'
-import { CommonBaseEntity } from '../../../common/base/common-base.entity'
+import { Column, Entity } from "typeorm";
+import { CommonBaseEntity } from "../../../common/base/common-base.entity";
 
 @Entity('star')
 export class Star extends CommonBaseEntity {
@@ -10,7 +10,7 @@ export class Star extends CommonBaseEntity {
     comment: '被点赞类型',
     name: 'stared_type',
   })
-  staredType: number
+  staredType: number;
 
   @Column({
     type: 'int',
@@ -18,7 +18,7 @@ export class Star extends CommonBaseEntity {
     comment: '被点赞的id',
     name: 'stared_id',
   })
-  staredId: number
+  staredId: number;
 
   @Column({
     type: 'int',
@@ -26,5 +26,5 @@ export class Star extends CommonBaseEntity {
     comment: '点赞人',
     name: 'starer',
   })
-  starer: number
+  starer: number;
 }
