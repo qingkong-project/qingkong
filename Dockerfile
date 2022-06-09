@@ -1,4 +1,4 @@
-FROM zhangtao25/qingkong-native:main as FrontEnd
+FROM zhangtao25/qingkong-native:vite as FrontEnd
 
 FROM node:14.16.0-alpine
 
