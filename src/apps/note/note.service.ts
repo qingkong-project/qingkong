@@ -4,6 +4,7 @@ import { Comment } from "./entities/comment.entity";
 import { Repository } from "typeorm";
 
 import { User } from "../user/entities/user.entity";
+import axios from 'axios'
 
 @Injectable()
 export class NoteService {
@@ -88,7 +89,39 @@ export class NoteService {
   }
 
   async listNote(params) {
-    return this.noteRepository.find();
+
+
+    function genUrl(f: any): string {
+      const { storageKey } = f;
+      const { postfix } = f;
+      return `http://public-api.rico.org.cn/${storageKey}.${postfix}`;
+    }
+
+
+
+    const rows = await this.noteRepository.find()
+
+    const box = []
+
+    for (let i = 0; i < rows.length; i++) {
+
+
+      await axios
+          .post(
+              "http://public-api.rico.org.cn/file/list",
+              { label: String(rows[i].id), bucket: "aaa" },
+          )
+          .then((res) => {
+            console.log({ label: String(rows[i].id), bucket: "aaa" },res.data)
+            box.push({
+              ...rows[i],
+              url:genUrl(res.data[0])
+            })
+          });
+    }
+
+
+    return box;
   }
 
   async createANote(params) {
