@@ -94,7 +94,7 @@ export class NoteService {
     function genUrl(f: any): string {
       const { storageKey } = f;
       const { postfix } = f;
-      return `http://public-api.rico.org.cn/${storageKey}.${postfix}`;
+      return `https://www.api.rico.org.cn/public-api/${storageKey}.${postfix}`;
     }
 
 
